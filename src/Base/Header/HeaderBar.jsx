@@ -23,7 +23,7 @@ export default function HeaderBar() {
           >
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate("Profile");
+                navigation.navigate("ProfileStack");
               }}
             >
               <AntDesign name="user" size={24} color="black" />

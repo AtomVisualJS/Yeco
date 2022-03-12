@@ -1,6 +1,8 @@
 import { View, Text } from "react-native";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 
+
+
 function MapsBox() {
   let position = {
     latitude: 37.78825,
@@ -15,7 +17,7 @@ function MapsBox() {
         provider={PROVIDER_GOOGLE}
         style={{
           width: "100%",
-          height: 500,
+          height: "100%",
         }}
         region={position}
       >

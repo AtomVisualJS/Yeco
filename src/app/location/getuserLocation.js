@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Platform, Text, View, StyleSheet } from 'react-native';
 import * as Location from 'expo-location';
@@ -16,8 +15,7 @@ export default function getuserLocation() {
       }
 
       let location = await Location.getCurrentPositionAsync({});
-      let adress = await Location.reverseGeocodeAsync(location.coords);
-      setLocation(adress);
+      setLocation(location);
     })();
   }, []);
 
@@ -28,14 +26,8 @@ export default function getuserLocation() {
     text = JSON.stringify(location);
   }
 
-  console.log(text);
   return (
-    <View style={styles.container}>
-      <Text>
-        {text}
-      </Text>
+    <View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({});
